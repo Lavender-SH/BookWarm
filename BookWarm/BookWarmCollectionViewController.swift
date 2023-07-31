@@ -9,6 +9,8 @@ import UIKit
 
 
 class BookWarmCollectionViewController: UICollectionViewController {
+    
+    let movieInfo = MovieInformation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
         let spacing: CGFloat = 20
         let width = UIScreen.main.bounds.width - (spacing * 3)
         
+
         layout.itemSize = CGSize(width: width / 2, height: width / 2)
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         layout.minimumLineSpacing = 20
@@ -40,17 +43,25 @@ class BookWarmCollectionViewController: UICollectionViewController {
     // MARK: - collectionView method
     //1.
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 8
     }
     //2.
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookWarmCollectionViewCell", for: indexPath) as! BookWarmCollectionViewCell
+        let row = movieInfo.movie[indexPath.row]
         
+        cell.configureCell(row: row)
+        cell.imageMatching(movieTitle: row.title)
         cell.backgroundColor = getRandomColor()
-        cell.titleLabel.text = "\(indexPath)"
+        cell.layer.cornerRadius = 20
+        cell.titleLabel.text = row.title
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("ddd")
     }
     
     func getRandomColor() -> UIColor {

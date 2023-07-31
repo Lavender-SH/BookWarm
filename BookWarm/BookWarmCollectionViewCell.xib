@@ -47,7 +47,7 @@
             </constraints>
             <size key="customSize" width="284" height="274"/>
             <connections>
-                <outlet property="imageView" destination="NRn-KP-3gu" id="c3c-wk-3ay"/>
+                <outlet property="movieImage" destination="NRn-KP-3gu" id="c3c-wk-3ay"/>
                 <outlet property="rateLabel" destination="ce5-31-l4m" id="OUo-yz-cWz"/>
                 <outlet property="titleLabel" destination="hUb-cn-b8T" id="t4O-34-zds"/>
             </connections>
