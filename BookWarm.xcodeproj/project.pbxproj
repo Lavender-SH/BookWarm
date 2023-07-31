@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		02F4CE272A779A91001018DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE262A779A91001018DF /* AppDelegate.swift */; };
 		02F4CE292A779A91001018DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE282A779A91001018DF /* SceneDelegate.swift */; };
-		02F4CE2B2A779A91001018DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE2A2A779A91001018DF /* ViewController.swift */; };
+		02F4CE2B2A779A91001018DF /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE2A2A779A91001018DF /* SubViewController.swift */; };
 		02F4CE2E2A779A91001018DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE2C2A779A91001018DF /* Main.storyboard */; };
 		02F4CE302A779A92001018DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE2F2A779A92001018DF /* Assets.xcassets */; };
 		02F4CE332A779A92001018DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE312A779A92001018DF /* LaunchScreen.storyboard */; };
@@ -18,13 +18,14 @@
 		02F4CE3F2A77A14D001018DF /* BookWarmCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE3D2A77A14D001018DF /* BookWarmCollectionViewCell.xib */; };
 		02F4CE412A77AEBA001018DF /* MovieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE402A77AEBA001018DF /* MovieInformation.swift */; };
 		02F4CE432A77AF3D001018DF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE422A77AF3D001018DF /* Movie.swift */; };
+		02F4CE452A77D3AA001018DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE442A77D3AA001018DF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02F4CE232A779A91001018DF /* BookWarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F4CE262A779A91001018DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F4CE282A779A91001018DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02F4CE2A2A779A91001018DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02F4CE2A2A779A91001018DF /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		02F4CE2D2A779A91001018DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02F4CE2F2A779A92001018DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F4CE322A779A92001018DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		02F4CE3D2A77A14D001018DF /* BookWarmCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookWarmCollectionViewCell.xib; sourceTree = "<group>"; };
 		02F4CE402A77AEBA001018DF /* MovieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInformation.swift; sourceTree = "<group>"; };
 		02F4CE422A77AF3D001018DF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		02F4CE442A77D3AA001018DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 			children = (
 				02F4CE262A779A91001018DF /* AppDelegate.swift */,
 				02F4CE282A779A91001018DF /* SceneDelegate.swift */,
-				02F4CE2A2A779A91001018DF /* ViewController.swift */,
+				02F4CE2A2A779A91001018DF /* SubViewController.swift */,
+				02F4CE442A77D3AA001018DF /* DetailViewController.swift */,
 				02F4CE2C2A779A91001018DF /* Main.storyboard */,
 				02F4CE3D2A77A14D001018DF /* BookWarmCollectionViewCell.xib */,
 				02F4CE3C2A77A14D001018DF /* BookWarmCollectionViewCell.swift */,
@@ -155,12 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F4CE432A77AF3D001018DF /* Movie.swift in Sources */,
-				02F4CE2B2A779A91001018DF /* ViewController.swift in Sources */,
+				02F4CE2B2A779A91001018DF /* SubViewController.swift in Sources */,
 				02F4CE412A77AEBA001018DF /* MovieInformation.swift in Sources */,
 				02F4CE272A779A91001018DF /* AppDelegate.swift in Sources */,
 				02F4CE3B2A77A04D001018DF /* BookWarmCollectionViewController.swift in Sources */,
 				02F4CE3E2A77A14D001018DF /* BookWarmCollectionViewCell.swift in Sources */,
 				02F4CE292A779A91001018DF /* SceneDelegate.swift in Sources */,
+				02F4CE452A77D3AA001018DF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book Warm Collection View Controller-->
+        <!--고래밥님의 책장-->
         <scene sceneID="gre-kg-zfn">
             <objects>
                 <collectionViewController storyboardIdentifier="BookWarmCollectionViewController" id="p8P-VR-g4H" customClass="BookWarmCollectionViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,42 +39,73 @@
                             <outlet property="delegate" destination="p8P-VR-g4H" id="UWu-hi-8Wi"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="gP4-DV-5ji"/>
+                    <navigationItem key="navigationItem" title="고래밥님의 책장" id="gP4-DV-5ji">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.magnifyingglass" catalog="system" id="hAd-JA-qmS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addClickedBarButton:" destination="p8P-VR-g4H" id="x00-cP-ySD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iq2-6Z-qKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="89.312977099236633" y="319.71830985915494"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="W7P-LO-hgM">
             <objects>
-                <viewController id="uOn-qP-uv6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="uOn-qP-uv6" customClass="DetailViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z4L-Ca-nEl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vml-8K-RKP">
+                                <rect key="frame" x="116" y="239" width="152" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="d8S-FI-SQU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="defactLabel" destination="vml-8K-RKP" id="1ox-4Z-xzH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX9-le-4JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.2442748091603" y="662.67605633802816"/>
+            <point key="canvasLocation" x="87.786259541984734" y="1007.7464788732395"/>
         </scene>
-        <!--View Controller-->
+        <!--Sub View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubViewController" id="BYZ-38-t0r" customClass="SubViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3au-FB-ow9">
+                                <rect key="frame" x="90" y="331" width="212" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="BAG-nb-ThT"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="3au-FB-ow9" id="ofd-Sd-O0E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-358"/>
+            <point key="canvasLocation" x="87.786259541984734" y="-358.45070422535213"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8FS-Rf-YFY">
@@ -96,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

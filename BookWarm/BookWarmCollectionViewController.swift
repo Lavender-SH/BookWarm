@@ -11,6 +11,10 @@ import UIKit
 class BookWarmCollectionViewController: UICollectionViewController {
     
     let movieInfo = MovieInformation()
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,9 @@ class BookWarmCollectionViewController: UICollectionViewController {
     
     
     
+    
+    
+    
     // MARK: - collectionView method
     //1.
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,6 +69,29 @@ class BookWarmCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("ddd")
+        
+        //DetailViewController(UIViewController) 생성해서 present 해보기!
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true)
+        let row = movieInfo.movie[indexPath.row]
+        
+        vc.contents = "상세화면"
+      //  contents.fontSize = 15
+      //  vc.title = row.title
+        vc.movieTitle = row.title
+        
+        
+        
+        //vc.contents = list[indexPath.row]
+        //값 전달 시 아웃렛을 활용할 수는 없음
+//        vc.contentsLabel.text = list[indexPath.row]
+        
+        //인터페이스 빌더에 네비게이션 컨트롤러가 임베드 되어 있어야만 Push가 동작합니다!
+        //navigationController?.pushViewController(vc, animated: true)
+        //UISwipeActiionsConfiguration(actions: [UIContextualAction]
+        
     }
     
     func getRandomColor() -> UIColor {
@@ -70,6 +100,32 @@ class BookWarmCollectionViewController: UICollectionViewController {
             let blue = CGFloat.random(in: 0...1)
             return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         }
+    
+    
+    
+    @IBAction func addClickedBarButton(_ sender: UIBarButtonItem) {
+        //1. 스토리보드 파일 찾기
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        //2. 스토리보드 파일 내 뷰컨트롤러 찾기
+        let vc2 = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        //2-1(옵션). 네비게이션 컨트롤러가 있는 형태(제목바)로 Present 하고 싶은 경우
+        let nav = UINavigationController(rootViewController: vc2)
+        
+        //3. 화면 전환 방식 설정
+//        v                                                                                                                                                                          c.modalTransitionStyle.crossDissolve //모달 애니메이션
+//        vc.modalPresentationStyle = .fullScreen //모달 방식
+        //4. 화면 띄우기
+        vc2.contents2 = "검색화면"
+        
+        
+        present(nav, animated: true)
+        
+        
+    }
+    
+    
+    
 }
 
 
