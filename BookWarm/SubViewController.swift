@@ -15,11 +15,13 @@ class SubViewController: UIViewController {
     
     var contents: String = "빈 공간"
     var movieTitle: String = "빈 공간"
+    var infoText: String? = "빈 공간"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         detailLabel.text = contents
+        infoTextView.text = infoText
         print(contents)
         title = movieTitle
        // let xmark = UIImage(systemName: "magnifyingglass")

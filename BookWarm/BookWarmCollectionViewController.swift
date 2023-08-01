@@ -87,17 +87,17 @@ class BookWarmCollectionViewController: UICollectionViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
         let nav = UINavigationController(rootViewController: vc)
-        
         let row = movieInfo.movie[indexPath.row]
         
         let text = row.overview
-        vc.infoTextView.text = text
-        vc.inLabel.text = "\(row.releaseDate) | \(row.runtime) | \(row.rate)"
+        vc.infoText = text
+        vc.contents = "개봉일\(row.releaseDate) | \(row.runtime)분 | 평점\(row.rate)"
+        vc.modalPresentationStyle = .fullScreen
         
         
         
         
-        vc.contents = "상세화면"
+       // vc.contents = "상세화면"
       //  contents.fontSize = 15
       //  vc.title = row.title
         vc.movieTitle = row.title
