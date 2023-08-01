@@ -10,6 +10,8 @@ import UIKit
 class SubViewController: UIViewController {
     
     @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var inLabel: UILabel!
+    @IBOutlet var infoTextView: UITextView!
     
     var contents: String = "빈 공간"
     var movieTitle: String = "빈 공간"
@@ -25,6 +27,7 @@ class SubViewController: UIViewController {
         
     }
     
+    
     @objc
     func closeButtonClicked(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -35,8 +38,19 @@ class SubViewController: UIViewController {
         
         vc.contents = "검색화면"
     }
+
+}
+
+//extension SubViewController {
+//    
+//    
+//    func configureCell(row: Movie) {
+//        print("aaa")
+//        inLabel.text = "\(row.releaseDate) | \(row.runtime) | \(row.rate)"
+//        infoTextView.text = row.overview
+//        
+//    }
     
 
 
-}
 

@@ -13,4 +13,8 @@ struct Movie {
     var title: String
     var rate: String
     var like: Bool
+    var releaseDate: String
+    var runtime: String
+    var overview: String
+    
 }

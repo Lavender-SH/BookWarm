@@ -30,6 +30,7 @@ class BookWarmCollectionViewCell: UICollectionViewCell {
         func configureCell(row: Movie) {
             titleLabel.text = row.title
             rateLabel.text = row.rate
+            
  
             
             var likeImage: UIImage?

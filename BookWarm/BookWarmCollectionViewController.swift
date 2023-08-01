@@ -87,8 +87,15 @@ class BookWarmCollectionViewController: UICollectionViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
         let nav = UINavigationController(rootViewController: vc)
-        present(nav, animated: true)
+        
         let row = movieInfo.movie[indexPath.row]
+        
+        let text = row.overview
+        vc.infoTextView.text = text
+        vc.inLabel.text = "\(row.releaseDate) | \(row.runtime) | \(row.rate)"
+        
+        
+        
         
         vc.contents = "상세화면"
       //  contents.fontSize = 15
@@ -96,7 +103,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
         vc.movieTitle = row.title
         
         
-        
+        present(nav, animated: true)
         //vc.contents = list[indexPath.row]
         //값 전달 시 아웃렛을 활용할 수는 없음
 //        vc.contentsLabel.text = list[indexPath.row]
