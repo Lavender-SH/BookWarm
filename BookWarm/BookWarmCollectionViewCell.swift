@@ -13,6 +13,7 @@ class BookWarmCollectionViewCell: UICollectionViewCell {
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var movieImage: UIImageView!
     
+    @IBOutlet var likeButton: UIButton!
     
     
     override func awakeFromNib() {
@@ -29,6 +30,11 @@ class BookWarmCollectionViewCell: UICollectionViewCell {
         func configureCell(row: Movie) {
             titleLabel.text = row.title
             rateLabel.text = row.rate
+ 
+            
+            var likeImage: UIImage?
+            likeImage = row.like ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+            likeButton.setImage(likeImage, for: .normal)
         }
         
         /// 타이틀 레이블의 텍스트를 movieTitle과 비교하여 일치하는 이미지로 이미지 뷰를 구성

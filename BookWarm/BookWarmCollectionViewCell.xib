@@ -32,14 +32,26 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-KP-3gu">
                         <rect key="frame" x="94" y="45" width="174" height="229"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-u4-CBz">
+                        <rect key="frame" x="206" y="4" width="70" height="35"/>
+                        <color key="backgroundColor" red="0.94328010080000002" green="0.91869580780000004" blue="0.27982812709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Tcu-Bv-lyU"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="NRn-KP-3gu" firstAttribute="leading" secondItem="ce5-31-l4m" secondAttribute="trailing" constant="44" id="30P-GU-Ug3"/>
+                <constraint firstItem="NRn-KP-3gu" firstAttribute="top" secondItem="Bcd-u4-CBz" secondAttribute="bottom" constant="6" id="8cr-g6-9dZ"/>
+                <constraint firstAttribute="trailing" secondItem="Bcd-u4-CBz" secondAttribute="trailing" constant="8" id="9P9-QG-MoZ"/>
                 <constraint firstItem="hUb-cn-b8T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Lrn-0i-gse"/>
                 <constraint firstItem="ce5-31-l4m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="RgH-3e-7bz"/>
                 <constraint firstItem="NRn-KP-3gu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="45" id="Skq-2k-TPm"/>
+                <constraint firstItem="Bcd-u4-CBz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="V6c-5W-tAJ"/>
                 <constraint firstAttribute="trailing" secondItem="NRn-KP-3gu" secondAttribute="trailing" constant="16" id="bGB-6x-Zo5"/>
                 <constraint firstAttribute="bottom" secondItem="ce5-31-l4m" secondAttribute="bottom" constant="8" id="bvo-CA-k4M"/>
                 <constraint firstAttribute="bottom" secondItem="NRn-KP-3gu" secondAttribute="bottom" id="fqJ-r2-jc0"/>
@@ -47,6 +59,7 @@
             </constraints>
             <size key="customSize" width="284" height="274"/>
             <connections>
+                <outlet property="likeButton" destination="Bcd-u4-CBz" id="33x-Z7-Ycx"/>
                 <outlet property="movieImage" destination="NRn-KP-3gu" id="c3c-wk-3ay"/>
                 <outlet property="rateLabel" destination="ce5-31-l4m" id="OUo-yz-cWz"/>
                 <outlet property="titleLabel" destination="hUb-cn-b8T" id="t4O-34-zds"/>
@@ -54,4 +67,7 @@
             <point key="canvasLocation" x="282.44274809160305" y="-59.154929577464792"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
 </document>

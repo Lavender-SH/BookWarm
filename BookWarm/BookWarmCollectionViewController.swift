@@ -10,8 +10,12 @@ import UIKit
 
 class BookWarmCollectionViewController: UICollectionViewController {
     
-    let movieInfo = MovieInformation()
-    
+    var movieInfo = MovieInformation()
+//    {
+//        didSet { //변수가 달라짐을 감지!
+//            print("DidSet이 뭘까...")
+//            collectionView.reloadData() }
+//    }
     
     
     
@@ -63,8 +67,17 @@ class BookWarmCollectionViewController: UICollectionViewController {
         cell.backgroundColor = getRandomColor()
         cell.layer.cornerRadius = 20
         cell.titleLabel.text = row.title
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func likeButtonClicked(_ sender: UIButton) {
+        print("clicked \(sender.tag)")
+        
+        movieInfo.movie[sender.tag].like.toggle()
+       collectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

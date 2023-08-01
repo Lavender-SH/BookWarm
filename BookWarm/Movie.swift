@@ -12,5 +12,5 @@ struct Movie {
     
     var title: String
     var rate: String
-    
+    var like: Bool
 }
