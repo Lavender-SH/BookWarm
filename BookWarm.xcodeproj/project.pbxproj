@@ -19,6 +19,11 @@
 		02F4CE412A77AEBA001018DF /* MovieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE402A77AEBA001018DF /* MovieInformation.swift */; };
 		02F4CE432A77AF3D001018DF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE422A77AF3D001018DF /* Movie.swift */; };
 		02F4CE452A77D3AA001018DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE442A77D3AA001018DF /* DetailViewController.swift */; };
+		02F4CE4D2A7A3D54001018DF /* movieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE4C2A7A3D54001018DF /* movieDetailViewController.swift */; };
+		02F4CE502A7A4697001018DF /* rollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE4E2A7A4697001018DF /* rollCollectionViewCell.swift */; };
+		02F4CE512A7A4697001018DF /* rollCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */; };
+		02F4CE582A7A46F5001018DF /* listTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE562A7A46F5001018DF /* listTableViewCell.swift */; };
+		02F4CE592A7A46F5001018DF /* listTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE572A7A46F5001018DF /* listTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		02F4CE402A77AEBA001018DF /* MovieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInformation.swift; sourceTree = "<group>"; };
 		02F4CE422A77AF3D001018DF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		02F4CE442A77D3AA001018DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		02F4CE4C2A7A3D54001018DF /* movieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDetailViewController.swift; sourceTree = "<group>"; };
+		02F4CE4E2A7A4697001018DF /* rollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rollCollectionViewCell.swift; sourceTree = "<group>"; };
+		02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rollCollectionViewCell.xib; sourceTree = "<group>"; };
+		02F4CE562A7A46F5001018DF /* listTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTableViewCell.swift; sourceTree = "<group>"; };
+		02F4CE572A7A46F5001018DF /* listTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +82,30 @@
 				02F4CE282A779A91001018DF /* SceneDelegate.swift */,
 				02F4CE2A2A779A91001018DF /* SubViewController.swift */,
 				02F4CE442A77D3AA001018DF /* DetailViewController.swift */,
-				02F4CE2C2A779A91001018DF /* Main.storyboard */,
-				02F4CE3D2A77A14D001018DF /* BookWarmCollectionViewCell.xib */,
-				02F4CE3C2A77A14D001018DF /* BookWarmCollectionViewCell.swift */,
 				02F4CE3A2A77A04D001018DF /* BookWarmCollectionViewController.swift */,
 				02F4CE402A77AEBA001018DF /* MovieInformation.swift */,
 				02F4CE422A77AF3D001018DF /* Movie.swift */,
-				02F4CE2F2A779A92001018DF /* Assets.xcassets */,
+				02F4CE3D2A77A14D001018DF /* BookWarmCollectionViewCell.xib */,
+				02F4CE3C2A77A14D001018DF /* BookWarmCollectionViewCell.swift */,
 				02F4CE312A779A92001018DF /* LaunchScreen.storyboard */,
 				02F4CE342A779A92001018DF /* Info.plist */,
+				02F4CE2F2A779A92001018DF /* Assets.xcassets */,
+				02F4CE5A2A7A4A60001018DF /* New Group */,
 			);
 			path = BookWarm;
+			sourceTree = "<group>";
+		};
+		02F4CE5A2A7A4A60001018DF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				02F4CE4C2A7A3D54001018DF /* movieDetailViewController.swift */,
+				02F4CE2C2A779A91001018DF /* Main.storyboard */,
+				02F4CE4E2A7A4697001018DF /* rollCollectionViewCell.swift */,
+				02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */,
+				02F4CE562A7A46F5001018DF /* listTableViewCell.swift */,
+				02F4CE572A7A46F5001018DF /* listTableViewCell.xib */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +168,8 @@
 			files = (
 				02F4CE3F2A77A14D001018DF /* BookWarmCollectionViewCell.xib in Resources */,
 				02F4CE332A779A92001018DF /* LaunchScreen.storyboard in Resources */,
+				02F4CE512A7A4697001018DF /* rollCollectionViewCell.xib in Resources */,
+				02F4CE592A7A46F5001018DF /* listTableViewCell.xib in Resources */,
 				02F4CE302A779A92001018DF /* Assets.xcassets in Resources */,
 				02F4CE2E2A779A91001018DF /* Main.storyboard in Resources */,
 			);
@@ -159,8 +184,11 @@
 			files = (
 				02F4CE432A77AF3D001018DF /* Movie.swift in Sources */,
 				02F4CE2B2A779A91001018DF /* SubViewController.swift in Sources */,
+				02F4CE582A7A46F5001018DF /* listTableViewCell.swift in Sources */,
 				02F4CE412A77AEBA001018DF /* MovieInformation.swift in Sources */,
 				02F4CE272A779A91001018DF /* AppDelegate.swift in Sources */,
+				02F4CE4D2A7A3D54001018DF /* movieDetailViewController.swift in Sources */,
+				02F4CE502A7A4697001018DF /* rollCollectionViewCell.swift in Sources */,
 				02F4CE3B2A77A04D001018DF /* BookWarmCollectionViewController.swift in Sources */,
 				02F4CE3E2A77A14D001018DF /* BookWarmCollectionViewCell.swift in Sources */,
 				02F4CE292A779A91001018DF /* SceneDelegate.swift in Sources */,
