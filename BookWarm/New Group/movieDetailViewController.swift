@@ -8,6 +8,33 @@
 import UIKit
 
 class movieDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rollCollectionViewCell", for: indexPath) as! rollCollectionViewCell
+        let row = movieInfo.movie[indexPath.row]
+        
+        // 이미지 설정
+        cell.imageMatching2(movieTitle: row.title)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath) as! listTableViewCell
+        let row = movieInfo.movie[indexPath.row]
+        
+        cell.configureCell2(row: row)
+        cell.imageMatching2(movieTitle: row.title)
+        return cell
+    }
+    
+    
     
     var movieInfo = MovieInformation()
     
@@ -30,6 +57,8 @@ class movieDetailViewController: UIViewController, UICollectionViewDelegate, UIC
         rollCollectionView.register(nib, forCellWithReuseIdentifier: "rollCollectionViewCell")
         listTableView.register(nib2, forCellReuseIdentifier: "listTableViewCell")
         
+        configureCollectionViewLayout()
+        
     }
     // MARK: - 컬렉션뷰 레이아웃 관련 함수
     func configureCollectionViewLayout() {
@@ -42,33 +71,33 @@ class movieDetailViewController: UIViewController, UICollectionViewDelegate, UIC
         
         
         // MARK: - 컬렉션뷰 관련 함수
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 8
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookWarmCollectionViewCell", for: indexPath) as! BookWarmCollectionViewCell
-            let row = movieInfo.movie[indexPath.row]
-            
-            // 이미지 설정
-            cell.imageMatching(movieTitle: row.title)
-            //cell.movieImageView.image = UIImage(named: ["광해", "7번방의선물"])
-        }
-        
-        
-        // MARK: - 테이블뷰 관련 함수
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 8
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath) as! listTableViewCell
-            let row = movieInfo.movie[indexPath.row]
-            
-            cell.configureCell2(row: row)
-            cell.imageMatching2(movieTitle: row.title)
-            
-        }
+//        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//            return 8
+//        }
+//
+//        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookWarmCollectionViewCell", for: indexPath) as! BookWarmCollectionViewCell
+//            let row = movieInfo.movie[indexPath.row]
+//
+//            // 이미지 설정
+//            cell.imageMatching(movieTitle: row.title)
+//            //cell.movieImageView.image = UIImage(named: ["광해", "7번방의선물"])
+//        }
+//
+//
+//        // MARK: - 테이블뷰 관련 함수
+//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return 8
+//        }
+//
+//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath) as! listTableViewCell
+//            let row = movieInfo.movie[indexPath.row]
+//
+//            cell.configureCell2(row: row)
+//            cell.imageMatching2(movieTitle: row.title)
+//
+//        }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             //1. 스토리보드 파일 찾기
