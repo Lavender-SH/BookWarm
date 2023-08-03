@@ -26,7 +26,16 @@ class rollCollectionViewCell: UICollectionViewCell {
     /// - Parameters:
     ///   - movieTitle: 이미지 파일 제목과 일치하는 제목
     func imageMatching2(movieTitle: String) {
-        rollaImage.image = UIImage(named: "암살")
+  
+        let imageNames = ["암살", "명량", "광해", "부산행", "아바타", "어벤져스엔드게임", "해운대", "7번방의선물", "겨울왕국2"]
+        let randomIndex = Int.random(in: 0..<imageNames.count)
+        let randomImageName = imageNames[randomIndex]
+
+        if let image = UIImage(named: randomImageName) {
+            rollaImage.image = image
+        } else {
+          
+        }
 //        if motittleLabel2.text == "암살" {
 //            self.rollaImage.image = UIImage(named: "암살")
 //        } else if motittleLabel2.text == "명량" {
