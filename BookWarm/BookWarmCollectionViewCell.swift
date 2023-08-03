@@ -12,7 +12,6 @@ class BookWarmCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var movieImage: UIImageView!
-    
     @IBOutlet var likeButton: UIButton!
     
     

@@ -26,10 +26,10 @@ class movieDetailViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath) as! listTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newTableViewCell", for: indexPath) as! newTableViewCell
         let row = movieInfo.movie[indexPath.row]
         
-        cell.configureCell2(row: row)
+        cell.configureCell3(row: row)
         cell.imageMatching2(movieTitle: row.title)
         return cell
     }
@@ -54,10 +54,10 @@ class movieDetailViewController: UIViewController, UICollectionViewDelegate, UIC
         listTableView.rowHeight = 140
         
         let nib = UINib(nibName: "rollCollectionViewCell", bundle: nil)
-        let nib2 = UINib(nibName: "listTableViewCell", bundle: nil)
+        let nib2 = UINib(nibName: "newTableViewCell", bundle: nil)
         
         rollCollectionView.register(nib, forCellWithReuseIdentifier: "rollCollectionViewCell")
-        listTableView.register(nib2, forCellReuseIdentifier: "listTableViewCell")
+        listTableView.register(nib2, forCellReuseIdentifier: "newTableViewCell")
         
         configureCollectionViewLayout()
     }

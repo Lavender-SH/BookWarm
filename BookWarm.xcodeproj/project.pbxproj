@@ -24,6 +24,8 @@
 		02F4CE512A7A4697001018DF /* rollCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */; };
 		02F4CE582A7A46F5001018DF /* listTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE562A7A46F5001018DF /* listTableViewCell.swift */; };
 		02F4CE592A7A46F5001018DF /* listTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE572A7A46F5001018DF /* listTableViewCell.xib */; };
+		02F4CE5F2A7BBCAE001018DF /* newTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4CE5D2A7BBCAE001018DF /* newTableViewCell.swift */; };
+		02F4CE602A7BBCAE001018DF /* newTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F4CE5E2A7BBCAE001018DF /* newTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rollCollectionViewCell.xib; sourceTree = "<group>"; };
 		02F4CE562A7A46F5001018DF /* listTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTableViewCell.swift; sourceTree = "<group>"; };
 		02F4CE572A7A46F5001018DF /* listTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listTableViewCell.xib; sourceTree = "<group>"; };
+		02F4CE5D2A7BBCAE001018DF /* newTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTableViewCell.swift; sourceTree = "<group>"; };
+		02F4CE5E2A7BBCAE001018DF /* newTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				02F4CE4F2A7A4697001018DF /* rollCollectionViewCell.xib */,
 				02F4CE562A7A46F5001018DF /* listTableViewCell.swift */,
 				02F4CE572A7A46F5001018DF /* listTableViewCell.xib */,
+				02F4CE5D2A7BBCAE001018DF /* newTableViewCell.swift */,
+				02F4CE5E2A7BBCAE001018DF /* newTableViewCell.xib */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 			files = (
 				02F4CE3F2A77A14D001018DF /* BookWarmCollectionViewCell.xib in Resources */,
 				02F4CE332A779A92001018DF /* LaunchScreen.storyboard in Resources */,
+				02F4CE602A7BBCAE001018DF /* newTableViewCell.xib in Resources */,
 				02F4CE512A7A4697001018DF /* rollCollectionViewCell.xib in Resources */,
 				02F4CE592A7A46F5001018DF /* listTableViewCell.xib in Resources */,
 				02F4CE302A779A92001018DF /* Assets.xcassets in Resources */,
@@ -192,6 +199,7 @@
 				02F4CE3B2A77A04D001018DF /* BookWarmCollectionViewController.swift in Sources */,
 				02F4CE3E2A77A14D001018DF /* BookWarmCollectionViewCell.swift in Sources */,
 				02F4CE292A779A91001018DF /* SceneDelegate.swift in Sources */,
+				02F4CE5F2A7BBCAE001018DF /* newTableViewCell.swift in Sources */,
 				02F4CE452A77D3AA001018DF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
