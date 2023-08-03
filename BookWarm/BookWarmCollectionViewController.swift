@@ -10,7 +10,11 @@ import UIKit
 
 class BookWarmCollectionViewController: UICollectionViewController {
     
+    
+    let searchBar = UISearchBar()
+    let list = ["암살", "명량", "광해", "부산행", "아바타", "어벤져스앤드게임", "해운대", "7번방의선물"]
     var movieInfo = MovieInformation()
+    var searchList: [String] = []
 //    {
 //        didSet { //변수가 달라짐을 감지!
 //            print("DidSet이 뭘까...")
@@ -28,6 +32,11 @@ class BookWarmCollectionViewController: UICollectionViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: "BookWarmCollectionViewCell")
         
         setCollectionViewLayout()
+        
+        searchBar.delegate = self
+        searchBar.placeholder = "검색어를 입력해주세요"
+        searchBar.showsCancelButton = true
+        navigationItem.titleView = searchBar
         
         // MARK: - 상자모양 세팅
     }
@@ -147,5 +156,37 @@ class BookWarmCollectionViewController: UICollectionViewController {
     
     
 }
+
+extension BookWarmCollectionViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchList.removeAll()
+        print(searchBar.text!)
+        for item in list {
+            if item.lowercased().contains(searchBar.text!) {
+                searchList.append(item)
+            }
+        }
+        print(searchList)
+        collectionView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchList.removeAll()
+        searchBar.text = ""
+        collectionView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchList.removeAll()
+        for item in list {
+            if item.lowercased().contains(searchText) {
+                searchList.append(item)
+            }
+        }
+        print(searchList)
+        collectionView.reloadData()
+    }
+}
+
 
 

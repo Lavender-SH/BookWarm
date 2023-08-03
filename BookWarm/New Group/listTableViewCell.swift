@@ -11,8 +11,12 @@ class listTableViewCell: UITableViewCell {
     
     var movieInfo = MovieInformation()
     
+
     @IBOutlet var mooImage: UIImageView!
     @IBOutlet var motitleLabel: UILabel!
+    
+    
+ 
     
     override func awakeFromNib() {
         super.awakeFromNib()

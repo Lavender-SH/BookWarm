@@ -13,19 +13,22 @@ class SubViewController: UIViewController {
     @IBOutlet var inLabel: UILabel!
     @IBOutlet var infoTextView: UITextView!
     
+    let placeholderText = "내용을 입력해주세요"
+    
     var contents: String = "빈 공간"
     var movieTitle: String = "빈 공간"
     var infoText: String? = "빈 공간"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         detailLabel.text = contents
         infoTextView.text = infoText
+        infoTextView.text = placeholderText
         print(contents)
         title = movieTitle
-       // let xmark = UIImage(systemName: "magnifyingglass")
-
+        // let xmark = UIImage(systemName: "magnifyingglass")
+        
         
     }
     
@@ -40,19 +43,22 @@ class SubViewController: UIViewController {
         
         vc.contents = "검색화면"
     }
-
-}
-
-//extension SubViewController {
-//    
-//    
-//    func configureCell(row: Movie) {
-//        print("aaa")
-//        inLabel.text = "\(row.releaseDate) | \(row.runtime) | \(row.rate)"
-//        infoTextView.text = row.overview
-//        
-//    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholderText
+            textView.textColor = .lightGray
+        }
+        
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeholderText {
+            textView.text = nil
+            textView.textColor = .black
+            }
+            
+            
+        }
+        
+        
+    }
     
-
-
-
+}
