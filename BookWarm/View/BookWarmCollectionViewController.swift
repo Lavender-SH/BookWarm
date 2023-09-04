@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class BookWarmCollectionViewController: UICollectionViewController {
     
@@ -20,15 +20,21 @@ class BookWarmCollectionViewController: UICollectionViewController {
 //            print("DidSet이 뭘까...")
 //            collectionView.reloadData() }
 //    }
-    
-    
-    
+    //⭐️⭐️⭐️
+    var tasks: Results<MovieTable>?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //⭐️⭐️⭐️
+        let realm = try! Realm()
+        tasks?.realm?.objects(MovieTable.self)
+        print(realm.configuration.fileURL)
+        
+        
         let nib = UINib(nibName: "BookWarmCollectionViewCell", bundle: nil)
-
+        
         collectionView.register(nib, forCellWithReuseIdentifier: "BookWarmCollectionViewCell")
         
         setCollectionViewLayout()
@@ -40,6 +46,8 @@ class BookWarmCollectionViewController: UICollectionViewController {
         
         // MARK: - 상자모양 세팅
     }
+    
+    
     func setCollectionViewLayout() {
         //cell estimated size none으로 인터페이스 빌더에서 설정할 것!
         let layout = UICollectionViewFlowLayout()
@@ -98,10 +106,21 @@ class BookWarmCollectionViewController: UICollectionViewController {
         let nav = UINavigationController(rootViewController: vc)
         let row = movieInfo.movie[indexPath.row]
         
+        //⭐️⭐️⭐️
+        let realm = try! Realm()
+        let task = MovieTable(movieTitle: row.title, movieRate: row.rate, movieLike: row.like, movieRuntime: row.runtime, movieOverview: row.overview)
+        
+        try! realm.write {
+            realm.add(task)
+            print("Realm Add Succeed")
+        }
+        //⭐️⭐️⭐️
+        
         let text = row.overview
         vc.infoText = text
         vc.contents = "개봉일\(row.releaseDate) | \(row.runtime)분 | 평점\(row.rate)"
         vc.modalPresentationStyle = .fullScreen
+        
         
         
         
@@ -187,6 +206,7 @@ extension BookWarmCollectionViewController: UISearchBarDelegate {
         collectionView.reloadData()
     }
 }
+
 
 
 
