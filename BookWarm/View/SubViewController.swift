@@ -12,12 +12,15 @@ class SubViewController: UIViewController {
     @IBOutlet var detailLabel: UILabel!
     @IBOutlet var inLabel: UILabel!
     @IBOutlet var infoTextView: UITextView!
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     
     let placeholderText = "내용을 입력해주세요"
     
     var contents: String = "빈 공간"
     var movieTitle: String = "빈 공간"
     var infoText: String? = "빈 공간"
+    var photo: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class SubViewController: UIViewController {
         detailLabel.text = contents
         infoTextView.text = infoText
         infoTextView.text = placeholderText
+        photoImageView = photo
         print(contents)
         title = movieTitle
         // let xmark = UIImage(systemName: "magnifyingglass")

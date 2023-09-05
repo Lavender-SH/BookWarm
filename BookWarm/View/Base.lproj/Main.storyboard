@@ -101,17 +101,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-an-Kzc">
+                                <rect key="frame" x="10" y="326" width="373" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="efS-zi-kiO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oyd-an-Kzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12g-tp-S7M"/>
                             <constraint firstItem="pee-Wf-dY6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Kds-uw-4rw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pee-Wf-dY6" secondAttribute="bottom" constant="16" id="S8w-zR-nos"/>
                             <constraint firstItem="pee-Wf-dY6" firstAttribute="top" secondItem="3au-FB-ow9" secondAttribute="bottom" constant="8" id="SNn-0M-6gA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oyd-an-Kzc" secondAttribute="trailing" constant="10" id="T3u-6n-LfB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pee-Wf-dY6" secondAttribute="trailing" constant="8" id="fnh-Dy-Oq8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3au-FB-ow9" secondAttribute="trailing" constant="4" id="gzE-1x-1z1"/>
                             <constraint firstItem="3au-FB-ow9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="iS2-DE-lMx"/>
+                            <constraint firstItem="oyd-an-Kzc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jo7-6B-cDz"/>
                             <constraint firstItem="3au-FB-ow9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mGM-3b-oMU"/>
+                            <constraint firstItem="oyd-an-Kzc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mbM-dM-uGZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BAG-nb-ThT"/>
@@ -119,6 +129,7 @@
                         <outlet property="detailLabel" destination="3au-FB-ow9" id="ofd-Sd-O0E"/>
                         <outlet property="inLabel" destination="3au-FB-ow9" id="tAa-9M-Ma6"/>
                         <outlet property="infoTextView" destination="pee-Wf-dY6" id="2yn-Ej-0Ui"/>
+                        <outlet property="photoImageView" destination="oyd-an-Kzc" id="N5d-Kn-XUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

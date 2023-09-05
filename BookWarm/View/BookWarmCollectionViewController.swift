@@ -21,8 +21,8 @@ class BookWarmCollectionViewController: UICollectionViewController {
 //            collectionView.reloadData() }
 //    }
     //⭐️⭐️⭐️
-    var tasks: Results<MovieTable>?
-
+    var tasks: Results<MovieTable>!
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +78,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookWarmCollectionViewCell", for: indexPath) as! BookWarmCollectionViewCell
         let row = movieInfo.movie[indexPath.row]
+
         
         cell.configureCell(row: row)
         cell.imageMatching(movieTitle: row.title)
@@ -99,7 +100,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("ddd")
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookWarmCollectionViewCell", for: indexPath) as! BookWarmCollectionViewCell
         //DetailViewController(UIViewController) 생성해서 present 해보기!
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
@@ -120,6 +121,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
         vc.infoText = text
         vc.contents = "개봉일\(row.releaseDate) | \(row.runtime)분 | 평점\(row.rate)"
         vc.modalPresentationStyle = .fullScreen
+        vc.photo = cell.movieImage
         
         
         
