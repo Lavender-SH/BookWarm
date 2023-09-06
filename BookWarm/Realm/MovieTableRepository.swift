@@ -13,7 +13,7 @@ protocol MovieTableRepositoryType: AnyObject {
     func fetch() -> Results<MovieTable>
     func fetchFilter() -> Results<MovieTable>
     func createItem(_ item: MovieTable)
-    func updateItem(_id: ObjectId, movieTitle: String, Overview: String)
+    func updateItem(id: ObjectId, movieTitle: String, Overview: String)
 }
 
 class MovieTableRepository: MovieTableRepositoryType {
@@ -68,7 +68,7 @@ class MovieTableRepository: MovieTableRepositoryType {
         }
     }
     
-    func updateItem(_id: ObjectId, movieTitle: String, Overview: String) {
+    func updateItem(id _id: ObjectId, movieTitle: String, Overview: String) {
         // realm 데이터 저장이 안될리는 거의 없는데 그래도 일말의 가능성을 보고 do, catch 에러 잡기
         do {
             try realm.write {

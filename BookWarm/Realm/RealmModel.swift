@@ -15,8 +15,8 @@ class MovieTable: Object {
     @Persisted var movieRate: String
     @Persisted var movieLike: Bool
     @Persisted var movieRuntime: String
-    @Persisted var Overview: String
-    @Persisted var movieSummary: String
+    @Persisted var Overview: String?
+    @Persisted var movieSummary: String?
 
     convenience init(movieTitle: String, movieRate: String, movieLike: Bool, movieRuntime: String, Overview: String, movieSummary: String) {
         self.init()

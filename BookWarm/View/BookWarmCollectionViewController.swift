@@ -109,8 +109,7 @@ class BookWarmCollectionViewController: UICollectionViewController {
         
         //⭐️⭐️⭐️
         let realm = try! Realm()
-        let task = MovieTable(movieTitle: row.title, movieRate: row.rate, movieLike: row.like, movieRuntime: row.runtime, movieOverview: row.overview)
-        
+        let task = MovieTable(movieTitle: row.title, movieRate: row.rate, movieLike: row.like, movieRuntime: row.runtime, Overview: row.overview, movieSummary: "")
         try! realm.write {
             realm.add(task)
             print("Realm Add Succeed")
@@ -123,8 +122,21 @@ class BookWarmCollectionViewController: UICollectionViewController {
         vc.modalPresentationStyle = .fullScreen
         vc.photo = cell.movieImage
         
-        
-        
+        //⭐️⭐️⭐️
+        //SubViewController 만들기 전 셀을 눌러서 데이터 삭제 하기 연습(공존할 수 없어 주석처리)
+        //Realm Delete
+//        let data = tasks[indexPath.row]
+//
+//        //Document에 있는 이미지 파일 삭제
+//        //순서중요 먼저 이미지 파일 지워야함. record 먼저 지우면 _id 못찾음.
+//        removeImageFromDocument(fileName: "jack_\(data.id).jpg")
+//
+//        try! realm.write { // transaction
+//            realm.delete(data) // realm db data 삭제
+//        }
+//
+//        tableView.reloadData()
+        //⭐️⭐️⭐️
         
         
        // vc.contents = "상세화면"

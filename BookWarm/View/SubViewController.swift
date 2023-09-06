@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SubViewController: UIViewController {
+    
+    var data: MovieTable?
+    let realm = try! Realm()
+    let repository = MovieTableRepository()
     
     @IBOutlet var detailLabel: UILabel!
     @IBOutlet var inLabel: UILabel!
@@ -32,8 +37,20 @@ class SubViewController: UIViewController {
         print(contents)
         title = movieTitle
         // let xmark = UIImage(systemName: "magnifyingglass")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "수정", style: .plain, target: self, action: #selector(editButtonClicked))
         
+    }
+    @objc func editButtonClicked() {
+
+        guard let data = data else { return }
         
+        repository.updateItem(
+            id: data.id,
+            movieTitle: movieTitle,
+            Overview: placeholderText
+        )
+        
+        navigationController?.popViewController(animated: true)
     }
     
     
