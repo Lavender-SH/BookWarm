@@ -15,15 +15,17 @@ class MovieTable: Object {
     @Persisted var movieRate: String
     @Persisted var movieLike: Bool
     @Persisted var movieRuntime: String
-    @Persisted var movieOverview: String
+    @Persisted var Overview: String
+    @Persisted var movieSummary: String
 
-    convenience init(movieTitle: String, movieRate: String, movieLike: Bool, movieRuntime: String, movieOverview: String) {
+    convenience init(movieTitle: String, movieRate: String, movieLike: Bool, movieRuntime: String, Overview: String, movieSummary: String) {
         self.init()
         
         self.movieTitle = movieTitle
         self.movieRate = movieRate
         self.movieLike = false
         self.movieRuntime = movieRuntime
-        self.movieOverview = movieOverview
+        self.Overview = Overview
+        self.movieSummary = movieSummary
     }
 }

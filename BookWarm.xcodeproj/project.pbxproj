@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02053FB52AA7575400BC42EF /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02053FB42AA7575400BC42EF /* FileManager+Extension.swift */; };
+		0234A6D52AA8A70200B093F7 /* MovieTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234A6D42AA8A70200B093F7 /* MovieTableRepository.swift */; };
 		02A1F2512AA604B000BD8878 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 02A1F2502AA604B000BD8878 /* Realm */; };
 		02A1F2532AA604B000BD8878 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02A1F2522AA604B000BD8878 /* RealmSwift */; };
 		02A1F2562AA606EA00BD8878 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1F2552AA606EA00BD8878 /* RealmModel.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		02053FB42AA7575400BC42EF /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		0234A6D42AA8A70200B093F7 /* MovieTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableRepository.swift; sourceTree = "<group>"; };
 		02A1F2552AA606EA00BD8878 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		02F4CE232A779A91001018DF /* BookWarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F4CE262A779A91001018DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				02A1F2552AA606EA00BD8878 /* RealmModel.swift */,
 				02F4CE402A77AEBA001018DF /* MovieInformation.swift */,
 				02053FB42AA7575400BC42EF /* FileManager+Extension.swift */,
+				0234A6D42AA8A70200B093F7 /* MovieTableRepository.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				02F4CE502A7A4697001018DF /* rollCollectionViewCell.swift in Sources */,
 				02F4CE3B2A77A04D001018DF /* BookWarmCollectionViewController.swift in Sources */,
 				02F4CE3E2A77A14D001018DF /* BookWarmCollectionViewCell.swift in Sources */,
+				0234A6D52AA8A70200B093F7 /* MovieTableRepository.swift in Sources */,
 				02F4CE292A779A91001018DF /* SceneDelegate.swift in Sources */,
 				02F4CE5F2A7BBCAE001018DF /* newTableViewCell.swift in Sources */,
 				02A1F2562AA606EA00BD8878 /* RealmModel.swift in Sources */,
